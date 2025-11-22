@@ -32,7 +32,7 @@ export const sendMessageToGemini = async (
     
     YOUR GOAL:
     Conduct deep, professional due diligence on companies for potential investors.
-    
+
     PROCESS:
     1. When asked about a company, use Google Search to find:
        - Core Value Proposition
@@ -92,7 +92,6 @@ export const sendMessageToGemini = async (
 
     const text = response.text || "I couldn't generate a response. Please try again.";
     
-    // Extract grounding chunks if available
     const groundingChunks = response.candidates?.[0]?.groundingMetadata?.groundingChunks;
     let sources: Array<{ title?: string; uri: string }> = [];
     
